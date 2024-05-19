@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TwitterTask"
         tools:targetApi="31">
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="@string/twitter_consumer_key" />
+        <meta-data
+            android:name="twitter4j.oauth.consumerKey"
+            android:value="@string/twitter_consumer_key"/>
+        <meta-data
+            android:name="twitter4j.oauth.consumerSecret"
+            android:value="@string/twitter_consumer_secret"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

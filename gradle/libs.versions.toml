@@ -1,0 +1,150 @@
+[versions]
+# Gradle Plugins
+androidGradlePlugin = "8.2.2"
+secretsGradlePlugin = "2.0.1"
+kotlin = "1.9.20"
+kotlinJvmTarget = "17"
+ktLint = "11.4.0"
+detekt = "1.22.0"
+
+# Support
+coreKtx = "1.10.1"
+
+# Arch Components
+lifecycle = "2.6.1"
+
+# Kotlin Coroutines
+kotlinCoroutines = "1.7.0"
+
+# Networking
+retrofit = "2.9.0"
+gson = "2.10.1"
+interceptor = "4.11.0"
+pluto = "2.1.4"
+
+# Room
+room = "2.5.1"
+
+# UI
+appCompat = "1.6.1"
+materialDesign = "1.9.0"
+constraintLayout = "2.1.4"
+androidNavigation = "2.5.3"
+swipeRefresh = "1.1.0"
+splash = "1.0.1"
+
+# Hilt
+hilt = "2.46.1"
+
+# twitter
+twitter = "3.3.0"
+
+# Utils
+coil = "2.4.0"
+timber = "5.0.1"
+
+# UI Test
+testCore = "1.5.0"
+junitKtxExt = "1.1.5"
+espresso = "3.5.1"
+
+# Unit Test
+junit = "4.13.2"
+mockito = "5.3.1"
+mockk = "1.13.5"
+coroutinesTest = "1.7.1"
+turbine = "0.13.0"
+androidx-test-ext-junit = "1.1.5"
+navigationFragmentKtx = "2.7.7"
+navigationUiKtx = "2.7.7"
+
+[libraries]
+# Support
+coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+
+# Kotlin
+kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+coroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
+coroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinCoroutines" }
+
+# Arch Components
+viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+viewModelState = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
+
+# Networking
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+gsonConverter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "interceptor" }
+plutoNetworkDebug = { module = "com.plutolib.plugins:network", version.ref = "pluto" }
+plutoNetworkRelease = { module = "com.plutolib.plugins:network-no-op", version.ref = "pluto" }
+
+# Room
+room = { module = "androidx.room:room-runtime", version.ref = "room" }
+roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
+roomCompiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# UI
+appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+materialDesign = { module = "com.google.android.material:material", version.ref = "materialDesign" }
+constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayout" }
+swipeRefresh = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swipeRefresh" }
+navigationFragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidNavigation" }
+navigationUI = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidNavigation" }
+splash = { module = "androidx.core:core-splashscreen", version.ref = "splash" }
+
+# Hilt
+hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hiltDaggerCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+
+# twitter
+twitterCore = { module = "com.twitter.sdk.android:twitter-core", version.ref = "twitter" }
+twitter = { module = "com.twitter.sdk.android:twitter", version.ref = "twitter" }
+
+
+
+# Utils
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+plutoDebug = { module = "com.plutolib:pluto", version.ref = "pluto" }
+plutoRelease = { module = "com.plutolib:pluto-no-op", version.ref = "pluto" }
+
+# UI Test
+testCore = { module = "androidx.test:core-ktx", version.ref = "testCore" }
+junitKtxExt = { module = "androidx.test.ext:junit-ktx", version.ref = "junitKtxExt" }
+espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+espressoContrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espresso" }
+
+# Unit Test
+junit = { module = "junit:junit", version.ref = "junit" }
+mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+
+[bundles]
+archComponents = ["viewModel", "livedata", "lifecycle", "viewModelState"]
+networking = ["retrofit", "interceptor", "gson", "gsonConverter"]
+kotlinCoroutines = ["coroutinesCore", "coroutinesAndroid"]
+ui = ["appCompat", "materialDesign", "constraintLayout"]
+navigationComponent = ["navigationFragment", "navigationUI"]
+room = ["room", "roomKtx"]
+uiTest = ["testCore", "junitKtxExt", "espresso", "espressoContrib"]
+unitTest = ["junit", "mockito", "mockk", "coroutinesTest", "turbine"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-plugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+navigationSafeArgs = { id = "androidx.navigation.safeargs", version.ref = "androidNavigation" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktLint" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsGradlePlugin" }
